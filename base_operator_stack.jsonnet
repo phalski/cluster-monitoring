@@ -25,7 +25,7 @@ local utils = import 'utils.libsonnet';
 
     kubeStateMetrics+:: {
       collectors: '',  // empty string gets a default set
-      scrapeInterval: '30s',
+      scrapeInterval: '45s',
       scrapeTimeout: '30s',
 
       baseCPU: '100m',

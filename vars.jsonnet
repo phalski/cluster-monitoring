@@ -6,7 +6,7 @@
   modules: [
     {
       name: 'armExporter',
-      enabled: false,
+      enabled: true,
       file: import 'arm_exporter.jsonnet',
     },
     {
@@ -21,7 +21,7 @@
     },
     {
       name: 'traefikExporter',
-      enabled: false,
+      enabled: true,
       file: import 'traefik.jsonnet',
     },
     {
@@ -32,12 +32,12 @@
   ],
 
   k3s: {
-    enabled: false,
-    master_ip: ['192.168.164.120']
+    enabled: true,
+    master_ip: ['192.168.88.11']
   },
 
   // Domain suffix for the ingresses
-  suffixDomain: '192.168.99.100.nip.io',
+  suffixDomain: 'cloudbox.fritz.box',
 
   // Setting these to false, defaults to emptyDirs
   enablePersistence: {
@@ -47,6 +47,6 @@
 
   // Grafana "from" email
   grafana: {
-    from_address: 'myemail@gmail.com',
+    from_address: '@gmail.com',
   },
 }

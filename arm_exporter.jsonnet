@@ -47,8 +47,8 @@ local utils = import 'utils.libsonnet';
           '/bin/rpi_exporter',
           '--web.listen-address=127.0.0.1:9243',
         ]) +
-        container.mixin.resources.withRequests({ cpu: '50m', memory: '50Mi' }) +
-        container.mixin.resources.withLimits({ cpu: '100m', memory: '100Mi' });
+        container.mixin.resources.withRequests({ cpu: '50m', memory: '40Mi' }) +
+        container.mixin.resources.withLimits({ cpu: '100m', memory: '80Mi' });
 
       local ip = containerEnv.fromFieldPath('IP', 'status.podIP');
       local proxy =
